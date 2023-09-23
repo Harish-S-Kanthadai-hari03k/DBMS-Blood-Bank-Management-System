@@ -1,0 +1,28 @@
+{% extends 'layout.html' %} {% block body %}
+<div class="jumbotron" style="background-color: #f7f7f7">
+  <h1>Blood Not Available</h1>
+  <br />
+  <h4>Contact Donors Below:</h4>
+  <hr class="my-4" />
+  <table class="table table-striped">
+    <tr>
+      <th>Donor ID</th>
+      <th>Donor Name</th>
+      <th>Blood Group</th>
+      <th>Sex</th>
+      <th>Address</th>
+      <th>Email</th>
+    </tr>
+    {% for ddata in ddatas %}
+    <tr>
+      <td>{{ddata.D_ID}}</td>
+      <td>{{ddata.DNAME}}</td>
+      <td>{{ddata.B_GROUP}}</td>
+      <td>{{ddata.SEX}}</td>
+      <td>{{ddata.ADDRESS}}</td>
+      <td>{{ddata.DEMAIL}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}
